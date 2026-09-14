@@ -18,269 +18,60 @@
             --nigeria-green: #008751;
             --nigeria-white: #ffffff;
         }
-        
-        body {
-            background-color: #f5f7fb;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .card {
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border: none;
-            margin-bottom: 20px;
-        }
-        
-        .card-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 12px 12px 0 0 !important;
-            padding: 15px 20px;
-            font-weight: 600;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-weight: 600;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .balance-card {
-            background: linear-gradient(135deg, #1a237e, #3949ab);
-            color: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .transaction-item {
-            border-left: 4px solid var(--accent);
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            background-color: white;
-            border-radius: 0 8px 8px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .transaction-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .credit {
-            border-left-color: var(--success);
-        }
-        
-        .debit {
-            border-left-color: var(--danger);
-        }
-        
-        .form-control, .form-select {
-            border-radius: 8px;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-        }
-        
-        .form-control:focus, .form-select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 0.2rem rgba(92, 107, 192, 0.25);
-        }
-        
-        .transfer-icon {
-            font-size: 48px;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-        
-        .security-notice {
-            background-color: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 15px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-        
-        .recent-transactions {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        
-        .notification-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: var(--danger);
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        
-        .step-indicator {
-            display: flex;
-            justify-content: space-between;
-            margin: 30px 0;
-            position: relative;
-        }
-        
-        .step-indicator::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #e0e0e0;
-            z-index: 1;
-        }
-        
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #757575;
-        }
-        
-        .step.active .step-circle {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .step.completed .step-circle {
-            background-color: var(--success);
-            color: white;
-        }
-        
-        .step-label {
-            font-size: 12px;
-            color: #757575;
-            text-align: center;
-        }
-        
-        .step.active .step-label {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .transfer-summary {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .payment-type-icon {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-        
-        .crypto-badge {
-            background-color: #f39c12;
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 5px;
-        }
-        
-        .currency-converter {
-            background-color: #e8f5e9;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 10px;
-            border-left: 4px solid #4caf50;
-        }
-        
-        .conversion-rate {
-            font-size: 14px;
-            color: #2e7d32;
-            margin-top: 5px;
-        }
-        
-        .nigeria-badge {
-            background: linear-gradient(135deg, var(--nigeria-green), #00663b);
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 8px;
-        }
-        
-        @media (max-width: 768px) {
-            .step-label {
-                font-size: 10px;
-            }
-            .balance-card {
-                padding: 15px;
-            }
-        }
+        body { background-color: #f5f7fb; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
+        .navbar-brand { font-weight: 700; color: var(--primary); }
+        .card { border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: none; margin-bottom: 20px; }
+        .card-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border-radius: 12px 12px 0 0 !important; padding: 15px 20px; font-weight: 600; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; border-radius: 8px; padding: 10px 20px; font-weight: 600; }
+        .btn-primary:hover { background: linear-gradient(135deg, var(--secondary), var(--accent)); transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .btn-primary:disabled { opacity: .6; transform: none; }
+        .balance-card { background: linear-gradient(135deg, #1a237e, #3949ab); color: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        .transaction-item { border-left: 4px solid var(--accent); padding: 12px 15px; margin-bottom: 10px; background-color: white; border-radius: 0 8px 8px 0; transition: all 0.3s ease; }
+        .transaction-item:hover { transform: translateX(5px); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+        .credit { border-left-color: var(--success); }
+        .debit { border-left-color: var(--danger); }
+        .form-control, .form-select { border-radius: 8px; padding: 10px 15px; border: 1px solid #ddd; }
+        .form-control:focus, .form-select:focus { border-color: var(--accent); box-shadow: 0 0 0 0.2rem rgba(92, 107, 192, 0.25); }
+        .security-notice { background-color: #e3f2fd; border-left: 4px solid #2196f3; padding: 15px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .recent-transactions { max-height: 400px; overflow-y: auto; }
+        .notification-badge { position: absolute; top: -5px; right: -5px; background-color: var(--danger); color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+        footer { background-color: var(--primary); color: white; padding: 20px 0; margin-top: 40px; }
+        .step-indicator { display: flex; justify-content: space-between; margin: 30px 0; position: relative; }
+        .step-indicator::before { content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 2px; background-color: #e0e0e0; z-index: 1; }
+        .step { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; }
+        .step-circle { width: 30px; height: 30px; border-radius: 50%; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; font-weight: bold; color: #757575; }
+        .step.active .step-circle { background-color: var(--primary); color: white; }
+        .step.completed .step-circle { background-color: var(--success); color: white; }
+        .step-label { font-size: 12px; color: #757575; text-align: center; }
+        .step.active .step-label { color: var(--primary); font-weight: 600; }
+        .transfer-summary { background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-top: 20px; }
+        .currency-converter { background-color: #e8f5e9; border-radius: 8px; padding: 15px; margin-top: 10px; border-left: 4px solid #4caf50; }
+        .conversion-rate { font-size: 14px; color: #2e7d32; margin-top: 5px; }
+        .nigeria-badge { background: linear-gradient(135deg, var(--nigeria-green), #00663b); color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
+        .account-name-box { margin-top: 6px; padding: 10px 12px; border-radius: 8px; font-size: 14px; font-weight: 600; display: none; }
+        .account-name-box.loading { background: #fff7ed; border: 1px solid #fed7aa; color: #c2410c; display: block; }
+        .account-name-box.ok      { background: #ecfdf5; border: 1px solid #a7f3d0; color: #047857; display: block; }
+        .account-name-box.err     { background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; display: block; }
+        .nibss-note { font-size: 12px; color: #64748b; margin-top: 6px; }
+        @media (max-width: 768px) { .step-label { font-size: 10px; } .balance-card { padding: 15px; } }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="/dashboard">
-                <i class="fas fa-university me-2"></i>Western Swift Connect
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="/dashboard"><i class="fas fa-university me-2"></i>Western Swift Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="/dashboard"><i class="fas fa-home me-1"></i> Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/transfer"><i class="fas fa-exchange-alt me-1"></i> Transfer</a></li>
                     <li class="nav-item"><a class="nav-link" href="history.html"><i class="fas fa-history me-1"></i> History</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://wa.me/+12272859869" target="_blank" id="whatsappSupportLink">
-                            <i class="fab fa-whatsapp me-1"></i> Support
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://wa.me/+12272859869" target="_blank" id="whatsappSupportLink"><i class="fab fa-whatsapp me-1"></i> Support</a></li>
                     <li class="nav-item"><a class="nav-link" href="/notifications"><i class="fas fa-bell me-1"></i> Notifications<span class="notification-badge">3</span></a></li>
                 </ul>
                 <div class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user-circle me-1"></i> <span id="userFullname">User Name</span>
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"><i class="fas fa-user-circle me-1"></i> <span id="userFullname">User Name</span></a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -296,9 +87,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0"><i class="fas fa-exchange-alt me-2"></i> Transfer Funds</h5>
-                    </div>
+                    <div class="card-header"><h5 class="mb-0"><i class="fas fa-exchange-alt me-2"></i> Transfer Funds</h5></div>
                     <div class="card-body">
                         <div class="step-indicator">
                             <div class="step active"><div class="step-circle">1</div><div class="step-label">Payment Method</div></div>
@@ -308,6 +97,7 @@
                         </div>
 
                         <form id="transferForm">
+                            <!-- STEP 1 -->
                             <div id="step1" class="form-step">
                                 <h5 class="mb-3">Select Payment Method</h5>
                                 <div class="row">
@@ -355,7 +145,8 @@
                                     <button type="button" class="btn btn-primary" id="nextToStep2">Next</button>
                                 </div>
                             </div>
-                            
+
+                            <!-- STEP 2 -->
                             <div id="step2" class="form-step d-none">
                                 <h5 class="mb-3">Recipient Information</h5>
                                 <div id="recipientDetailsForm"></div>
@@ -364,7 +155,8 @@
                                     <button type="button" class="btn btn-primary" id="nextToStep3">Next</button>
                                 </div>
                             </div>
-                            
+
+                            <!-- STEP 3 -->
                             <div id="step3" class="form-step d-none">
                                 <h5 class="mb-3">Transfer Details</h5>
                                 <div class="row">
@@ -403,7 +195,8 @@
                                     <button type="button" class="btn btn-primary" id="nextToStep4">Next</button>
                                 </div>
                             </div>
-                            
+
+                            <!-- STEP 4 -->
                             <div id="step4" class="form-step d-none">
                                 <div class="text-center mb-4"><i class="fas fa-check-circle text-success" style="font-size: 64px;"></i><h4 class="mt-3">Confirm Your Transfer</h4><p class="text-muted">Please review the details below before confirming</p></div>
                                 <div class="transfer-summary">
@@ -431,7 +224,7 @@
                 </div>
                 <div class="security-notice"><h6><i class="fas fa-shield-alt me-2"></i> Security Notice</h6><p class="mb-0">For your security, all transactions are monitored and encrypted. Never share your login details or OTP with anyone. Western Swift Connect will never ask for your password via email or phone.</p></div>
             </div>
-            
+
             <div class="col-lg-4">
                 <div class="balance-card"><div class="d-flex justify-content-between align-items-center"><div><p class="mb-1">Available Balance</p><h2 id="currentBalance">$0.00</h2><p class="mb-0">Account: <span id="userAccountNumber">-</span></p></div><i class="fas fa-wallet fa-3x opacity-75"></i></div></div>
                 <div class="card"><div class="card-header"><h5 class="mb-0"><i class="fas fa-history me-2"></i> Recent Transactions</h5></div><div class="card-body"><div class="recent-transactions" id="recentTransactions"><div class="text-center py-4"><i class="fas fa-spinner fa-spin fa-2x text-muted"></i><p class="mt-2 text-muted">Loading transactions...</p></div></div><div class="text-center mt-3"><a href="history.html" class="btn btn-outline-primary btn-sm">View All Transactions</a></div></div></div>
@@ -443,43 +236,619 @@
     <footer class="mt-5"><div class="container"><div class="row"><div class="col-md-4 mb-3"><h5>Western Swift Connect</h5><p>Secure and reliable banking services for all your financial needs.</p></div><div class="col-md-2 mb-3"><h5>Services</h5><ul class="list-unstyled"><li><a href="#" class="text-light">Personal Banking</a></li><li><a href="#" class="text-light">Business Banking</a></li><li><a href="#" class="text-light">Loans</a></li><li><a href="#" class="text-light">Investments</a></li></ul></div><div class="col-md-2 mb-3"><h5>Support</h5><ul class="list-unstyled"><li><a href="#" class="text-light">Help Center</a></li><li><a href="#" class="text-light">Contact Us</a></li><li><a href="#" class="text-light">Security Tips</a></li><li><a href="#" class="text-light">FAQ</a></li></ul></div><div class="col-md-4 mb-3"><h5>Contact Info</h5><ul class="list-unstyled"><li><i class="fab fa-whatsapp me-2"></i> +1 (227) 285-9869</li><li><i class="fas fa-envelope me-2"></i> support@westernswiftconnect.com</li><li><i class="fas fa-map-marker-alt me-2"></i> 123 Financial District, San Francisco, CA</li></ul></div></div><hr class="my-4"><div class="row align-items-center"><div class="col-md-6"><p class="mb-0">&copy; 2025 Western Swift Connect. All rights reserved.</p></div><div class="col-md-6 text-md-end"><a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a><a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a><a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a><a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a></div></div></div></footer>
 
     <div class="modal fade" id="activationModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header border-0"><h5 class="modal-title"><i class="fas fa-lock me-2"></i> Security Verification</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><i class="fas fa-shield-alt text-primary mb-3" style="font-size: 64px;"></i><h4>Enter Activation Code</h4><p>Please enter the activation code to complete your transfer.</p><div class="mb-3"><input type="text" class="form-control form-control-lg text-center" id="activationCode" placeholder="Enter activation code" maxlength="8"><div class="form-text">Enter the 8-digit activation code</div></div><div id="activationError" class="alert alert-danger d-none"><i class="fas fa-exclamation-circle me-2"></i> Invalid activation code. <a href="https://wa.me/+12272859869" class="alert-link">Click to contact support</a> to purchase your code.</div></div><div class="modal-footer border-0 justify-content-center"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button><button type="button" class="btn btn-primary" id="verifyActivationCode">Verify Code</button></div></div></div></div>
-    <div class="modal fade" id="successModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header border-0"><h5 class="modal-title text-success"><i class="fas fa-check-circle me-2"></i> Transfer Successful</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><i class="fas fa-check-circle text-success mb-3" style="font-size: 64px;"></i><h4>Transfer Completed!</h4><p>Your transfer of <strong id="successAmount">$0.00</strong> to <strong id="successRecipient">Recipient Name</strong> has been processed successfully.</p><p class="mb-0">Transaction ID: <span id="successTransactionId" class="text-muted">-</span></p></div><div class="modal-footer border-0 justify-content-center"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button><button type="button" class="btn btn-outline-primary" id="printReceipt">Print Receipt</button></div></div></div></div>
+    <div class="modal fade" id="successModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header border-0"><h5 class="modal-title text-success"><i class="fas fa-check-circle me-2"></i> Transfer Successful</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><i class="fas fa-check-circle text-success mb-3" style="font-size: 64px;"></i><h4>Transfer Completed!</h4><p>Your transfer of <strong id="successAmount">$0.00</strong> to <strong id="successRecipient">Recipient Name</strong> has been processed successfully.</p><p class="mb-0">Transaction ID: <span id="successTransactionId" class="text-muted">-</span></p><p class="mb-0 small text-muted" id="successBankRefWrap">Bank Ref: <span id="successBankRef">-</span></p></div><div class="modal-footer border-0 justify-content-center"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button><button type="button" class="btn btn-outline-primary" id="printReceipt">Print Receipt</button></div></div></div></div>
     <div class="modal fade" id="errorModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header border-0"><h5 class="modal-title text-danger"><i class="fas fa-exclamation-circle me-2"></i> Transfer Failed</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><i class="fas fa-times-circle text-danger mb-3" style="font-size: 64px;"></i><h4>Transfer Unsuccessful</h4><p id="errorMessage">An error occurred while processing your transfer. Please try again.</p></div><div class="modal-footer border-0 justify-content-center"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try Again</button></div></div></div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        let userData = null, currentStep = 1, currentExchangeRate = 1, targetCurrency = 'USD';
-        const CORRECT_ACTIVATION_CODE = "UK1917WU";
-        const cryptoRates = { BTC:0.000025, ETH:0.0004, LTC:0.005, BCH:0.002, XRP:1.5, ADA:2.0, DOT:0.1, DOGE:10, SOL:0.05, TRX:15, XLM:5, XMR:0.0006, DASH:0.003, ZEC:0.008 };
-        
-        const paymentTypes = {
-            bank_transfer:{name:"Bank Transfer",currency:"USD",fields:[{name:"accountNumber",label:"Account Number",type:"text",required:true},{name:"routingNumber",label:"Routing Number / SWIFT Code",type:"text",required:true},{name:"bankName",label:"Bank Name",type:"text",required:true},{name:"accountName",label:"Account Holder Name",type:"text",required:true}]},
-            wire_transfer:{name:"Wire Transfer",currency:"USD",fields:[{name:"accountNumber",label:"Account Number",type:"text",required:true},{name:"swiftCode",label:"SWIFT/BIC Code",type:"text",required:true},{name:"bankName",label:"Bank Name",type:"text",required:true},{name:"bankAddress",label:"Bank Address",type:"text",required:true},{name:"accountName",label:"Account Holder Name",type:"text",required:true}]},
-            nigeria_bank:{name:"Nigeria Bank Transfer (NIBSS/NIP)",currency:"NGN",fields:[{name:"accountNumber",label:"NUBAN Account Number (10 digits)",type:"text",required:true},{name:"bankName",label:"Bank Name",type:"select",required:true,options:["Access Bank","GTBank","Zenith Bank","First Bank","UBA","Fidelity Bank","Stanbic IBTC","Union Bank","Ecobank","Polaris Bank","Keystone Bank","Wema Bank","Unity Bank","Jaiz Bank","Providus Bank","Titan Trust Bank","Globus Bank","Premium Trust Bank","Sterling Bank","SunTrust Bank","CitiBank","Standard Chartered","Rand Merchant Bank"]},{name:"accountName",label:"Account Holder Name",type:"text",required:true},{name:"bvn",label:"BVN (Optional)",type:"text",required:false},{name:"nubanCode",label:"Bank Code (NIP optional)",type:"text",required:false}]},
-            ach_transfer:{name:"ACH Transfer",currency:"USD",fields:[{name:"accountNumber",label:"Account Number",type:"text",required:true},{name:"routingNumber",label:"Routing Number",type:"text",required:true},{name:"accountName",label:"Account Holder Name",type:"text",required:true},{name:"accountType",label:"Account Type",type:"select",required:true,options:["Checking","Savings"]}]},
-            ...Object.fromEntries(['sepa_transfer','swift_transfer','uk_bank','canada_bank','australia_bank','europe_bank','paypal','zelle','venmo','cashapp','googlepay','applepay','skrill','neteller','payoneer','wise','bitcoin','ethereum','litecoin','bitcoin_cash','ripple','cardano','polkadot','dogecoin','solana','tron','stellar','monero','dash','zcash','momo_ghana','mpesa_kenya','mtn_momo','airtel_money','orange_money','western_union','moneygram','ria','worldremit','remitly'].map(k=>[k,{name:k.replace(/_/g,' ').toUpperCase(),currency:'USD',fields:[{name:"identifier",label:"Recipient Identifier",type:"text",required:true},{name:"fullName",label:"Full Name",type:"text",required:true}]}]))
+    /* ============================================================
+       GLOBAL STATE
+       ============================================================ */
+    let userData = null;
+    let currentStep = 1;
+    let currentExchangeRate = 1;
+    let targetCurrency = 'USD';
+
+    // Cache of Nigerian banks loaded from backend (code → name)
+    let nigeriaBanks = [];
+    // Resolved recipient name from Paystack (set after successful resolve)
+    let resolvedAccountName = '';
+    let resolveDebounce = null;
+
+    const CORRECT_ACTIVATION_CODE = "UK1917WU";
+    const cryptoRates = { BTC:0.000025, ETH:0.0004, LTC:0.005, BCH:0.002, XRP:1.5, ADA:2.0, DOT:0.1, DOGE:10, SOL:0.05, TRX:15, XLM:5, XMR:0.0006, DASH:0.003, ZEC:0.008 };
+
+    // Fallback Nigerian banks in case /api/banks fails — safe to send anyway
+    const FALLBACK_NIGERIA_BANKS = [
+        { name: "Access Bank", code: "044" },
+        { name: "Citibank Nigeria", code: "023" },
+        { name: "Ecobank Nigeria", code: "050" },
+        { name: "Fidelity Bank", code: "070" },
+        { name: "First Bank of Nigeria", code: "011" },
+        { name: "First City Monument Bank", code: "214" },
+        { name: "Guaranty Trust Bank", code: "058" },
+        { name: "Heritage Bank", code: "030" },
+        { name: "Keystone Bank", code: "082" },
+        { name: "Polaris Bank", code: "076" },
+        { name: "Providus Bank", code: "101" },
+        { name: "Stanbic IBTC Bank", code: "221" },
+        { name: "Standard Chartered Bank", code: "068" },
+        { name: "Sterling Bank", code: "232" },
+        { name: "Union Bank of Nigeria", code: "032" },
+        { name: "United Bank For Africa", code: "033" },
+        { name: "Unity Bank", code: "215" },
+        { name: "Wema Bank", code: "035" },
+        { name: "Zenith Bank", code: "057" }
+    ];
+
+    /* ============================================================
+       PAYMENT TYPES
+       ============================================================ */
+    const paymentTypes = {
+        bank_transfer:{name:"Bank Transfer",currency:"USD",fields:[
+            {name:"accountNumber",label:"Account Number",type:"text",required:true},
+            {name:"routingNumber",label:"Routing Number / SWIFT Code",type:"text",required:true},
+            {name:"bankName",label:"Bank Name",type:"text",required:true},
+            {name:"accountName",label:"Account Holder Name",type:"text",required:true}
+        ]},
+        wire_transfer:{name:"Wire Transfer",currency:"USD",fields:[
+            {name:"accountNumber",label:"Account Number",type:"text",required:true},
+            {name:"swiftCode",label:"SWIFT/BIC Code",type:"text",required:true},
+            {name:"bankName",label:"Bank Name",type:"text",required:true},
+            {name:"bankAddress",label:"Bank Address",type:"text",required:true},
+            {name:"accountName",label:"Account Holder Name",type:"text",required:true}
+        ]},
+        nigeria_bank:{name:"Nigeria Bank Transfer (NIBSS/NIP)",currency:"NGN",fields:[
+            {name:"accountNumber",label:"NUBAN Account Number (10 digits)",type:"text",required:true,maxlength:10,pattern:"\\d{10}"},
+            {name:"bankCode",label:"Bank",type:"select",required:true,options:[]}, // filled dynamically
+            {name:"bankName",label:"Bank Name (auto-filled)",type:"hidden"},
+            {name:"accountName",label:"Account Holder Name",type:"text",required:true,readonly:true}, // auto-filled by resolve
+            {name:"bvn",label:"BVN (Optional)",type:"text",required:false},
+            {name:"description",label:"Narration (Optional)",type:"text",required:false}
+        ]},
+        ach_transfer:{name:"ACH Transfer",currency:"USD",fields:[
+            {name:"accountNumber",label:"Account Number",type:"text",required:true},
+            {name:"routingNumber",label:"Routing Number",type:"text",required:true},
+            {name:"accountName",label:"Account Holder Name",type:"text",required:true},
+            {name:"accountType",label:"Account Type",type:"select",required:true,options:["Checking","Savings"]}
+        ]},
+        ...Object.fromEntries(
+            ['sepa_transfer','swift_transfer','uk_bank','canada_bank','australia_bank','europe_bank',
+             'paypal','zelle','venmo','cashapp','googlepay','applepay','skrill','neteller','payoneer','wise',
+             'bitcoin','ethereum','litecoin','bitcoin_cash','ripple','cardano','polkadot','dogecoin','solana','tron','stellar','monero','dash','zcash',
+             'momo_ghana','mpesa_kenya','mtn_momo','airtel_money','orange_money',
+             'western_union','moneygram','ria','worldremit','remitly']
+            .map(k=>[k,{name:k.replace(/_/g,' ').toUpperCase(),currency:'USD',fields:[
+                {name:"identifier",label:"Recipient Identifier",type:"text",required:true},
+                {name:"fullName",label:"Full Name",type:"text",required:true}
+            ]}])
+        )
+    };
+
+    ['bitcoin','ethereum','litecoin','bitcoin_cash','ripple','cardano','polkadot','dogecoin','solana','tron','stellar','monero','dash','zcash']
+        .forEach(c=>{ if(paymentTypes[c]) paymentTypes[c].currency = c.toUpperCase(); });
+
+    /* ============================================================
+       INIT
+       ============================================================ */
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchUserData();
+        preloadNigeriaBanks();
+        document.getElementById('transferDate').value = new Date().toISOString().split('T')[0];
+
+        document.getElementById('nextToStep2').addEventListener('click', goToStep2);
+        document.getElementById('nextToStep3').addEventListener('click', goToStep3);
+        document.getElementById('nextToStep4').addEventListener('click', goToStep4);
+        document.getElementById('backToStep1').addEventListener('click', goToStep1);
+        document.getElementById('backToStep2').addEventListener('click', goToStep2FromStep3);
+        document.getElementById('backToStep3').addEventListener('click', goToStep3FromStep4);
+        document.getElementById('confirmTransfer').addEventListener('click', showActivationModal);
+        document.getElementById('verifyActivationCode').addEventListener('click', verifyActivationCode);
+        document.getElementById('paymentType').addEventListener('change', updatePaymentTypeFields);
+        document.getElementById('amount').addEventListener('input', updateCurrencyConversion);
+        document.getElementById('printReceipt').addEventListener('click', () => window.print());
+
+        // Allow Enter key inside activation code to submit
+        document.getElementById('activationCode').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') { e.preventDefault(); verifyActivationCode(); }
+        });
+    });
+
+    /* ============================================================
+       USER DATA
+       ============================================================ */
+    function fetchUserData(){
+        fetch('/data').then(r=>r.json()).then(d=>{
+            userData = d;
+            document.getElementById('userFullname').textContent = d.fullname;
+            document.getElementById('currentBalance').textContent = `$${parseFloat(d.balance).toFixed(2)}`;
+            document.getElementById('availableBalance').textContent = parseFloat(d.balance).toFixed(2);
+            document.getElementById('userAccountNumber').textContent = d.account_number;
+            document.getElementById('confirmFromAccount').textContent = d.account_number;
+            loadRecentTransactions();
+        }).catch(e=>{ if(e.message.includes('401')) window.location.href = '/login'; });
+    }
+
+    function loadRecentTransactions(){
+        fetch('/history').then(r=>r.json()).then(trans=>{
+            const c = document.getElementById('recentTransactions');
+            c.innerHTML = '';
+            if(!trans.length){ c.innerHTML = '<p class="text-muted text-center py-4">No recent transactions</p>'; return; }
+            trans.slice(-5).reverse().forEach(t=>{
+                const div = document.createElement('div');
+                div.className = `transaction-item ${t.type}`;
+                div.innerHTML = `<div class="d-flex justify-content-between"><div><strong>${t.senderName || t.to || 'N/A'}</strong><br><small class="text-muted">${new Date(t.date).toLocaleDateString()}</small></div><div class="text-end"><span class="${t.type==='credit'?'text-success':'text-danger'}">${t.type==='credit'?'+':'-'}$${parseFloat(t.amount).toFixed(2)}</span><br><small class="text-muted">${t.transactionId || ''}</small></div></div>`;
+                c.appendChild(div);
+            });
+        }).catch(()=>{ document.getElementById('recentTransactions').innerHTML = '<p class="text-danger text-center py-4">Error loading transactions</p>'; });
+    }
+
+    /* ============================================================
+       NIGERIAN BANKS — load once, keep in memory
+       ============================================================ */
+    async function preloadNigeriaBanks(){
+        try {
+            const r = await fetch('/api/banks');
+            const j = await r.json();
+            if (j.success && Array.isArray(j.banks) && j.banks.length){
+                nigeriaBanks = j.banks;
+            } else {
+                nigeriaBanks = FALLBACK_NIGERIA_BANKS;
+            }
+        } catch(e){
+            console.warn('Bank list load failed, using fallback', e);
+            nigeriaBanks = FALLBACK_NIGERIA_BANKS;
+        }
+        // If the user already has the nigeria form open, refresh it
+        if (document.getElementById('paymentType').value === 'nigeria_bank'
+            && document.getElementById('recipientDetailsForm').innerHTML.trim()){
+            updatePaymentTypeFields();
+        }
+    }
+
+    /* ============================================================
+       STEP NAV
+       ============================================================ */
+    function goToStep2(){
+        const type = document.getElementById('paymentType').value;
+        if(!type){ alert('Please select a payment type'); return; }
+        document.getElementById('summaryPaymentMethod').textContent = paymentTypes[type].name;
+        document.getElementById('confirmPaymentMethod').textContent = paymentTypes[type].name;
+        document.getElementById('step1').classList.add('d-none');
+        document.getElementById('step2').classList.remove('d-none');
+        updateStepIndicator(2);
+        currentStep = 2;
+        updatePaymentTypeFields();
+    }
+
+    function goToStep3(){
+        const type = document.getElementById('paymentType').value;
+        const cfg = paymentTypes[type];
+        let valid = true;
+
+        // Standard validation
+        cfg.fields.forEach(f=>{
+            if (f.type === 'hidden') return;
+            const inp = document.getElementById(f.name);
+            if(!inp) return;
+            if(f.required && !inp.value){
+                valid = false;
+                inp.classList.add('is-invalid');
+            } else {
+                inp.classList.remove('is-invalid');
+            }
+        });
+
+        // Nigeria-specific validation
+        if (type === 'nigeria_bank'){
+            const acct = document.getElementById('accountNumber').value.trim();
+            const bankCode = document.getElementById('bankCode').value;
+            if(!/^\d{10}$/.test(acct)){
+                valid = false;
+                document.getElementById('accountNumber').classList.add('is-invalid');
+                alert('Nigerian account number must be exactly 10 digits.');
+                return;
+            }
+            if(!bankCode){
+                valid = false;
+                document.getElementById('bankCode').classList.add('is-invalid');
+                alert('Please select a Nigerian bank.');
+                return;
+            }
+            if(!resolvedAccountName){
+                alert('Please wait for account verification to finish, or re-enter the account number.');
+                return;
+            }
+        }
+
+        if(!valid){ alert('Please fill in all required recipient details'); return; }
+
+        // ---- Fill summary/confirm fields ----
+        const recipientField = cfg.fields.find(f =>
+            f.name.toLowerCase().includes('name') || f.name === 'identifier');
+        const recipientName = recipientField
+            ? (document.getElementById(recipientField.name)?.value || '')
+            : '';
+        document.getElementById('summaryRecipient').textContent = recipientName || '—';
+        document.getElementById('confirmRecipient').textContent = recipientName || '—';
+        document.getElementById('confirmToAccount').textContent =
+            (type === 'nigeria_bank')
+                ? (document.getElementById('accountNumber').value || '—')
+                : (recipientName || '—');
+
+        // Dynamic summary rows
+        let dyn = '';
+        cfg.fields.forEach(f=>{
+            if (f.type === 'hidden') return;
+            let val = '';
+            if (f.type === 'select' && type === 'nigeria_bank' && f.name === 'bankCode'){
+                const sel = document.getElementById('bankCode');
+                val = sel.options[sel.selectedIndex]?.text || '';
+            } else {
+                val = document.getElementById(f.name)?.value || '';
+            }
+            if(!val) return;
+            dyn += `<div class="row"><div class="col-6">${f.label}:</div><div class="col-6">${val}</div></div>`;
+        });
+        document.getElementById('dynamicSummaryFields').innerHTML = dyn;
+
+        let dynConfirm = '';
+        cfg.fields.forEach(f=>{
+            if (f.type === 'hidden') return;
+            let val = '';
+            if (f.type === 'select' && type === 'nigeria_bank' && f.name === 'bankCode'){
+                const sel = document.getElementById('bankCode');
+                val = sel.options[sel.selectedIndex]?.text || '';
+            } else {
+                val = document.getElementById(f.name)?.value || '';
+            }
+            if(!val) return;
+            dynConfirm += `<div class="row mb-2"><div class="col-6 fw-bold">${f.label}:</div><div class="col-6">${val}</div></div>`;
+        });
+        document.getElementById('dynamicConfirmFields').innerHTML = dynConfirm;
+
+        document.getElementById('step2').classList.add('d-none');
+        document.getElementById('step3').classList.remove('d-none');
+        updateStepIndicator(3);
+        currentStep = 3;
+        updateCurrencyConversion();
+    }
+
+    function goToStep4(){
+        const amt  = document.getElementById('amount').value;
+        const date = document.getElementById('transferDate').value;
+        if(!amt || amt <= 0){ alert('Please enter a valid amount'); return; }
+        if(parseFloat(amt) > parseFloat(userData.balance)){ alert('Insufficient funds for this transfer'); return; }
+        if(!date){ alert('Please select a transfer date'); return; }
+
+        document.getElementById('summaryAmount').textContent = `$${parseFloat(amt).toFixed(2)}`;
+
+        const convSum = document.getElementById('convertedAmountSummary');
+        if(targetCurrency !== 'USD'){
+            const converted = (parseFloat(amt)*currentExchangeRate).toFixed(targetCurrency in cryptoRates ? 8 : 2);
+            convSum.innerHTML = `<div class="row"><div class="col-6">Amount (${targetCurrency}):</div><div class="col-6">${converted} ${targetCurrency}</div></div>`;
+            convSum.classList.remove('d-none');
+        } else convSum.classList.add('d-none');
+
+        document.getElementById('confirmAmount').textContent = `$${parseFloat(amt).toFixed(2)}`;
+        document.getElementById('confirmTotal').textContent  = `$${parseFloat(amt).toFixed(2)}`;
+        document.getElementById('confirmDate').textContent   = new Date(date).toLocaleDateString();
+        document.getElementById('confirmDescription').textContent =
+            document.getElementById('description').value || 'No description';
+
+        const convConf = document.getElementById('convertedAmountConfirm');
+        if(targetCurrency !== 'USD'){
+            const converted = (parseFloat(amt)*currentExchangeRate).toFixed(targetCurrency in cryptoRates ? 8 : 2);
+            convConf.innerHTML = `<div class="row mb-2"><div class="col-6 fw-bold">Amount (${targetCurrency}):</div><div class="col-6 fw-bold text-primary">${converted} ${targetCurrency}</div></div>`;
+            convConf.classList.remove('d-none');
+        } else convConf.classList.add('d-none');
+
+        document.getElementById('step3').classList.add('d-none');
+        document.getElementById('step4').classList.remove('d-none');
+        updateStepIndicator(4);
+        currentStep = 4;
+    }
+
+    function goToStep1(){ document.getElementById('step2').classList.add('d-none'); document.getElementById('step1').classList.remove('d-none'); updateStepIndicator(1); }
+    function goToStep2FromStep3(){ document.getElementById('step3').classList.add('d-none'); document.getElementById('step2').classList.remove('d-none'); updateStepIndicator(2); }
+    function goToStep3FromStep4(){ document.getElementById('step4').classList.add('d-none'); document.getElementById('step3').classList.remove('d-none'); updateStepIndicator(3); }
+
+    function updateStepIndicator(step){
+        document.querySelectorAll('.step').forEach((s,i)=>{
+            s.classList.remove('active','completed');
+            if(i+1 < step) s.classList.add('completed');
+            else if(i+1 === step) s.classList.add('active');
+        });
+    }
+
+    /* ============================================================
+       RECIPIENT FORM RENDERING
+       ============================================================ */
+    function updatePaymentTypeFields(){
+        const type = document.getElementById('paymentType').value;
+        const cont = document.getElementById('recipientDetailsForm');
+
+        // Reset resolve state whenever form changes
+        resolvedAccountName = '';
+
+        if(!type){ cont.innerHTML = '<p class="text-muted">Please select a payment type</p>'; return; }
+        const cfg = paymentTypes[type];
+
+        // If it's the Nigeria form, use the live bank list if we have it
+        if (type === 'nigeria_bank'){
+            cfg.fields[1].options = (nigeriaBanks.length ? nigeriaBanks : FALLBACK_NIGERIA_BANKS);
+        }
+
+        let html = '';
+
+        if (type === 'nigeria_bank'){
+            // Custom Nigeria layout
+            html += `
+                <div class="alert alert-success d-flex align-items-center py-2 px-3 mb-3" style="background:#e8f5e9;border:1px solid #a5d6a7;color:#1b5e20;">
+                    <i class="fas fa-flag me-2"></i>
+                    <div class="small">
+                        <strong>NIBSS / NIP Instant Transfer</strong> — Nigerian bank accounts (₦).
+                        The recipient's name will be verified automatically.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="bankCode" class="form-label">Bank</label>
+                    <select class="form-select" id="bankCode" name="bankCode" required>
+                        <option value="">Select bank</option>
+                        ${cfg.fields[1].options.map(b => `<option value="${b.code}" data-name="${b.name}">${b.name}</option>`).join('')}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="accountNumber" class="form-label">NUBAN Account Number (10 digits)</label>
+                    <input type="text" class="form-control" id="accountNumber" name="accountNumber"
+                           inputmode="numeric" maxlength="10" placeholder="e.g. 0123456789" required>
+                    <div id="accountNameBox" class="account-name-box"></div>
+                    <div class="nibss-note">We'll verify the account name instantly before proceeding.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="accountName" class="form-label">Account Holder Name (auto-detected)</label>
+                    <input type="text" class="form-control" id="accountName" name="accountName"
+                           placeholder="Will auto-fill after verification" readonly required>
+                </div>
+                <div class="mb-3">
+                    <label for="bvn" class="form-label">BVN (Optional)</label>
+                    <input type="text" class="form-control" id="bvn" name="bvn" maxlength="11" placeholder="11-digit BVN (optional)">
+                </div>
+            `;
+        } else {
+            cfg.fields.forEach(f => {
+                if (f.type === 'hidden') return;
+                if (f.type === 'select'){
+                    html += `<div class="mb-3"><label for="${f.name}" class="form-label">${f.label}</label>
+                        <select class="form-select" id="${f.name}" name="${f.name}" ${f.required?'required':''}>
+                            <option value="">Select ${f.label}</option>
+                            ${f.options.map(opt=>`<option value="${opt}">${opt}</option>`).join('')}
+                        </select></div>`;
+                } else {
+                    const extra = f.readonly ? 'readonly' : '';
+                    const maxlen = f.maxlength ? `maxlength="${f.maxlength}"` : '';
+                    html += `<div class="mb-3"><label for="${f.name}" class="form-label">${f.label}</label>
+                        <input type="${f.type}" class="form-control" id="${f.name}" name="${f.name}"
+                        ${f.required?'required':''} ${extra} ${maxlen}></div>`;
+                }
+            });
+        }
+        cont.innerHTML = html;
+
+        // Wire up the Nigeria-specific account resolver
+        if (type === 'nigeria_bank'){
+            const acctEl = document.getElementById('accountNumber');
+            const bankEl = document.getElementById('bankCode');
+            const nameBox = document.getElementById('accountNameBox');
+            const nameInput = document.getElementById('accountName');
+
+            const trigger = () => {
+                resolvedAccountName = '';
+                nameInput.value = '';
+                clearTimeout(resolveDebounce);
+                resolveDebounce = setTimeout(() => resolveNigerianAccount(acctEl.value.trim(), bankEl.value), 350);
+            };
+            acctEl.addEventListener('input', () => {
+                acctEl.value = acctEl.value.replace(/\D/g,'').slice(0,10);
+                trigger();
+            });
+            bankEl.addEventListener('change', trigger);
+            nameBox.className = 'account-name-box';
+            nameBox.style.display = 'none';
+        }
+
+        updateCurrencyConverter(cfg.currency);
+    }
+
+    /* ============================================================
+       NIGERIAN ACCOUNT RESOLUTION
+       ============================================================ */
+    async function resolveNigerianAccount(accountNumber, bankCode){
+        const box = document.getElementById('accountNameBox');
+        const nameInput = document.getElementById('accountName');
+        if(!box || !nameInput) return;
+
+        // Reset
+        resolvedAccountName = '';
+        nameInput.value = '';
+
+        if(!/^\d{10}$/.test(accountNumber) || !bankCode){
+            box.className = 'account-name-box';
+            box.style.display = 'none';
+            return;
+        }
+
+        box.className = 'account-name-box loading';
+        box.textContent = '⏳ Verifying account…';
+
+        try {
+            const r = await fetch('/api/resolve-account', {
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body: JSON.stringify({ account_number: accountNumber, bank_code: bankCode })
+            });
+            const j = await r.json();
+
+            if (j.success && j.account_name){
+                resolvedAccountName = j.account_name;
+                nameInput.value = j.account_name;
+                box.className = 'account-name-box ok';
+                box.textContent = '✅ ' + j.account_name;
+            } else {
+                box.className = 'account-name-box err';
+                box.textContent = '❌ ' + (j.message || 'Could not verify account');
+            }
+        } catch(e){
+            box.className = 'account-name-box err';
+            box.textContent = '❌ Network error verifying account';
+        }
+    }
+
+    /* ============================================================
+       CURRENCY CONVERSION
+       ============================================================ */
+    function updateCurrencyConverter(currency){
+        const conv = document.getElementById('currencyConverter');
+        const sel  = document.getElementById('targetCurrency');
+        if(currency !== 'USD'){
+            conv.classList.remove('d-none');
+            targetCurrency = currency;
+            sel.innerHTML = `<option value="${currency}">${currency}</option>`;
+            updateCurrencyConversion();
+        } else {
+            conv.classList.add('d-none');
+            targetCurrency = 'USD';
+            currentExchangeRate = 1;
+        }
+    }
+
+    function updateCurrencyConversion(){
+        const amt = parseFloat(document.getElementById('amount').value) || 0;
+        const rateSpan = document.getElementById('conversionRateText');
+        const amtSpan  = document.getElementById('convertedAmountText');
+        if(targetCurrency === 'USD'){ rateSpan.textContent = 'Exchange rate: 1 USD = 1 USD'; amtSpan.textContent = ''; return; }
+
+        if(cryptoRates[targetCurrency]){
+            const rate = cryptoRates[targetCurrency];
+            currentExchangeRate = rate;
+            rateSpan.textContent = `Exchange rate: 1 USD = ${rate} ${targetCurrency}`;
+            amtSpan.textContent  = `Converted amount: ${(amt*rate).toFixed(8)} ${targetCurrency}`;
+        } else {
+            const fallback = { EUR:0.85, GBP:0.73, CAD:1.25, AUD:1.35, GHS:5.8, KES:110, XAF:550, NGN:1470 };
+            const rate = fallback[targetCurrency] || 1;
+            currentExchangeRate = rate;
+            rateSpan.textContent = `Exchange rate: 1 USD ≈ ${rate} ${targetCurrency}`;
+            amtSpan.textContent  = `Converted amount: ${(amt*rate).toFixed(2)} ${targetCurrency}`;
+        }
+    }
+
+    /* ============================================================
+       ACTIVATION + SUBMIT
+       ============================================================ */
+    function showActivationModal(){
+        if(!document.getElementById('confirmCheck').checked){
+            alert('Please confirm that the information is correct');
+            return;
+        }
+        new bootstrap.Modal(document.getElementById('activationModal')).show();
+        document.getElementById('activationError').classList.add('d-none');
+        document.getElementById('activationCode').value = '';
+    }
+
+    function verifyActivationCode(){
+        if(document.getElementById('activationCode').value === CORRECT_ACTIVATION_CODE){
+            document.getElementById('activationError').classList.add('d-none');
+            bootstrap.Modal.getInstance(document.getElementById('activationModal')).hide();
+            handleTransfer();
+        } else {
+            document.getElementById('activationError').classList.remove('d-none');
+        }
+    }
+
+    function handleTransfer(){
+        const type = document.getElementById('paymentType').value;
+        const cfg  = paymentTypes[type];
+
+        // Build payload
+        const payload = {
+            paymentType: type,
+            amount: document.getElementById('amount').value,
+            description: document.getElementById('description').value,
+            transferDate: document.getElementById('transferDate').value,
+            targetCurrency,
+            exchangeRate: currentExchangeRate
         };
-        ['bitcoin','ethereum','litecoin','bitcoin_cash','ripple','cardano','polkadot','dogecoin','solana','tron','stellar','monero','dash','zcash'].forEach(c=>{if(paymentTypes[c])paymentTypes[c].currency=c.toUpperCase()});
-        
-        document.addEventListener('DOMContentLoaded',()=>{fetchUserData();document.getElementById('transferDate').value=new Date().toISOString().split('T')[0];document.getElementById('nextToStep2').addEventListener('click',goToStep2);document.getElementById('nextToStep3').addEventListener('click',goToStep3);document.getElementById('nextToStep4').addEventListener('click',goToStep4);document.getElementById('backToStep1').addEventListener('click',goToStep1);document.getElementById('backToStep2').addEventListener('click',goToStep2FromStep3);document.getElementById('backToStep3').addEventListener('click',goToStep3FromStep4);document.getElementById('confirmTransfer').addEventListener('click',showActivationModal);document.getElementById('verifyActivationCode').addEventListener('click',verifyActivationCode);document.getElementById('paymentType').addEventListener('change',updatePaymentTypeFields);document.getElementById('amount').addEventListener('input',updateCurrencyConversion);document.getElementById('printReceipt').addEventListener('click',()=>window.print());});
-        
-        function fetchUserData(){fetch('/data').then(r=>r.json()).then(d=>{userData=d;document.getElementById('userFullname').textContent=d.fullname;document.getElementById('currentBalance').textContent=`$${parseFloat(d.balance).toFixed(2)}`;document.getElementById('availableBalance').textContent=parseFloat(d.balance).toFixed(2);document.getElementById('userAccountNumber').textContent=d.account_number;document.getElementById('confirmFromAccount').textContent=d.account_number;loadRecentTransactions();}).catch(e=>{if(e.message.includes('401'))window.location.href='/login';});}
-        function loadRecentTransactions(){fetch('/history').then(r=>r.json()).then(trans=>{const c=document.getElementById('recentTransactions');c.innerHTML='';if(trans.length===0){c.innerHTML='<p class="text-muted text-center py-4">No recent transactions</p>';return;}trans.slice(-5).reverse().forEach(t=>{const div=document.createElement('div');div.className=`transaction-item ${t.type}`;div.innerHTML=`<div class="d-flex justify-content-between"><div><strong>${t.senderName||t.to||'N/A'}</strong><br><small class="text-muted">${new Date(t.date).toLocaleDateString()}</small></div><div class="text-end"><span class="${t.type==='credit'?'text-success':'text-danger'}">${t.type==='credit'?'+':'-'}$${parseFloat(t.amount).toFixed(2)}</span><br><small class="text-muted">${t.transactionId}</small></div></div>`;c.appendChild(div);});}).catch(()=>{document.getElementById('recentTransactions').innerHTML='<p class="text-danger text-center py-4">Error loading transactions</p>';});}
-        
-        function updatePaymentTypeFields(){const type=document.getElementById('paymentType').value,cont=document.getElementById('recipientDetailsForm');if(!type){cont.innerHTML='<p class="text-muted">Please select a payment type</p>';return;}const cfg=paymentTypes[type];let html='';cfg.fields.forEach(f=>{if(f.type==='select')html+=`<div class="mb-3"><label for="${f.name}" class="form-label">${f.label}</label><select class="form-select" id="${f.name}" name="${f.name}" ${f.required?'required':''}><option value="">Select ${f.label}</option>${f.options.map(opt=>`<option value="${opt}">${opt}</option>`).join('')}</select></div>`;else html+=`<div class="mb-3"><label for="${f.name}" class="form-label">${f.label}</label><input type="${f.type}" class="form-control" id="${f.name}" name="${f.name}" ${f.required?'required':''}></div>`;});cont.innerHTML=html;updateCurrencyConverter(cfg.currency);}
-        function updateCurrencyConverter(currency){const conv=document.getElementById('currencyConverter'),sel=document.getElementById('targetCurrency');if(currency!=='USD'){conv.classList.remove('d-none');targetCurrency=currency;sel.innerHTML=`<option value="${currency}">${currency}</option>`;updateCurrencyConversion();}else{conv.classList.add('d-none');targetCurrency='USD';currentExchangeRate=1;}}
-        function updateCurrencyConversion(){const amt=parseFloat(document.getElementById('amount').value)||0;const rateSpan=document.getElementById('conversionRateText'),amtSpan=document.getElementById('convertedAmountText');if(targetCurrency==='USD'){rateSpan.textContent='Exchange rate: 1 USD = 1 USD';amtSpan.textContent='';return;}if(cryptoRates[targetCurrency]){const rate=cryptoRates[targetCurrency];currentExchangeRate=rate;rateSpan.textContent=`Exchange rate: 1 USD = ${rate} ${targetCurrency}`;amtSpan.textContent=`Converted amount: ${(amt*rate).toFixed(8)} ${targetCurrency}`;}else{const fallback={EUR:0.85,GBP:0.73,CAD:1.25,AUD:1.35,GHS:5.8,KES:110,XAF:550,NGN:1470};const rate=fallback[targetCurrency]||1;currentExchangeRate=rate;rateSpan.textContent=`Exchange rate: 1 USD ≈ ${rate} ${targetCurrency}`;amtSpan.textContent=`Converted amount: ${(amt*rate).toFixed(2)} ${targetCurrency}`;}}
-        
-        function goToStep2(){const type=document.getElementById('paymentType').value;if(!type){alert('Please select a payment type');return;}document.getElementById('summaryPaymentMethod').textContent=paymentTypes[type].name;document.getElementById('confirmPaymentMethod').textContent=paymentTypes[type].name;document.getElementById('step1').classList.add('d-none');document.getElementById('step2').classList.remove('d-none');updateStepIndicator(2);currentStep=2;updatePaymentTypeFields();}
-        function goToStep3(){const type=document.getElementById('paymentType').value,cfg=paymentTypes[type];let valid=true;cfg.fields.forEach(f=>{const inp=document.getElementById(f.name);if(f.required&&(!inp||!inp.value)){valid=false;if(inp)inp.classList.add('is-invalid');}else if(inp)inp.classList.remove('is-invalid');});if(!valid){alert('Please fill in all required recipient details');return;}const recipientField=cfg.fields.find(f=>f.name.includes('Name')||f.name.includes('name')||f.name.includes('receiverName'));if(recipientField){const rname=document.getElementById(recipientField.name).value;document.getElementById('summaryRecipient').textContent=rname;document.getElementById('confirmRecipient').textContent=rname;document.getElementById('confirmToAccount').textContent=rname;}let dyn='';cfg.fields.forEach(f=>{const val=document.getElementById(f.name)?.value||'';dyn+=`<div class="row"><div class="col-6">${f.label}:</div><div class="col-6">${val}</div></div>`;});document.getElementById('dynamicSummaryFields').innerHTML=dyn;let dynConfirm='';cfg.fields.forEach(f=>{const val=document.getElementById(f.name)?.value||'';dynConfirm+=`<div class="row mb-2"><div class="col-6 fw-bold">${f.label}:</div><div class="col-6">${val}</div></div>`;});document.getElementById('dynamicConfirmFields').innerHTML=dynConfirm;document.getElementById('step2').classList.add('d-none');document.getElementById('step3').classList.remove('d-none');updateStepIndicator(3);currentStep=3;updateCurrencyConversion();}
-        function goToStep4(){const amt=document.getElementById('amount').value,date=document.getElementById('transferDate').value;if(!amt||amt<=0){alert('Please enter a valid amount');return;}if(parseFloat(amt)>parseFloat(userData.balance)){alert('Insufficient funds for this transfer');return;}if(!date){alert('Please select a transfer date');return;}document.getElementById('summaryAmount').textContent=`$${parseFloat(amt).toFixed(2)}`;const convSum=document.getElementById('convertedAmountSummary');if(targetCurrency!=='USD'){const converted=(parseFloat(amt)*currentExchangeRate).toFixed(targetCurrency in cryptoRates?8:2);convSum.innerHTML=`<div class="row"><div class="col-6">Amount (${targetCurrency}):</div><div class="col-6">${converted} ${targetCurrency}</div></div>`;convSum.classList.remove('d-none');}else convSum.classList.add('d-none');document.getElementById('confirmAmount').textContent=`$${parseFloat(amt).toFixed(2)}`;document.getElementById('confirmTotal').textContent=`$${parseFloat(amt).toFixed(2)}`;document.getElementById('confirmDate').textContent=new Date(date).toLocaleDateString();document.getElementById('confirmDescription').textContent=document.getElementById('description').value||'No description';const convConf=document.getElementById('convertedAmountConfirm');if(targetCurrency!=='USD'){const converted=(parseFloat(amt)*currentExchangeRate).toFixed(targetCurrency in cryptoRates?8:2);convConf.innerHTML=`<div class="row mb-2"><div class="col-6 fw-bold">Amount (${targetCurrency}):</div><div class="col-6 fw-bold text-primary">${converted} ${targetCurrency}</div></div>`;convConf.classList.remove('d-none');}else convConf.classList.add('d-none');document.getElementById('step3').classList.add('d-none');document.getElementById('step4').classList.remove('d-none');updateStepIndicator(4);currentStep=4;}
-        function goToStep1(){document.getElementById('step2').classList.add('d-none');document.getElementById('step1').classList.remove('d-none');updateStepIndicator(1);}
-        function goToStep2FromStep3(){document.getElementById('step3').classList.add('d-none');document.getElementById('step2').classList.remove('d-none');updateStepIndicator(2);}
-        function goToStep3FromStep4(){document.getElementById('step4').classList.add('d-none');document.getElementById('step3').classList.remove('d-none');updateStepIndicator(3);}
-        function updateStepIndicator(step){document.querySelectorAll('.step').forEach((s,i)=>{s.classList.remove('active','completed');if(i+1<step)s.classList.add('completed');else if(i+1===step)s.classList.add('active');});}
-        function showActivationModal(){if(!document.getElementById('confirmCheck').checked){alert('Please confirm that the information is correct');return;}new bootstrap.Modal(document.getElementById('activationModal')).show();document.getElementById('activationError').classList.add('d-none');document.getElementById('activationCode').value='';}
-        function verifyActivationCode(){if(document.getElementById('activationCode').value===CORRECT_ACTIVATION_CODE){document.getElementById('activationError').classList.add('d-none');bootstrap.Modal.getInstance(document.getElementById('activationModal')).hide();handleTransfer();}else document.getElementById('activationError').classList.remove('d-none');}
-        function handleTransfer(){const type=document.getElementById('paymentType').value,cfg=paymentTypes[type];const payload={paymentType:type,amount:document.getElementById('amount').value,description:document.getElementById('description').value,transferDate:document.getElementById('transferDate').value,targetCurrency,exchangeRate:currentExchangeRate};cfg.fields.forEach(f=>{payload[f.name]=document.getElementById(f.name)?.value||'';});const btn=document.getElementById('confirmTransfer');btn.disabled=true;btn.innerHTML='<i class="fas fa-spinner fa-spin me-2"></i> Processing...';fetch('/api/transfer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(r=>r.json()).then(data=>{if(data.message==='Transfer successful!'){document.getElementById('successAmount').textContent=`$${parseFloat(payload.amount).toFixed(2)}`;const nameField=cfg.fields.find(f=>f.name.includes('Name')||f.name.includes('name'));if(nameField)document.getElementById('successRecipient').textContent=payload[nameField.name];document.getElementById('successTransactionId').textContent='txn_'+Math.random().toString(36).substr(2,9).toUpperCase();new bootstrap.Modal(document.getElementById('successModal')).show();fetchUserData();document.getElementById('transferForm').reset();document.getElementById('step4').classList.add('d-none');document.getElementById('step1').classList.remove('d-none');updateStepIndicator(1);}else throw new Error(data.message||'Transfer failed');}).catch(err=>{document.getElementById('errorMessage').textContent=err.message;new bootstrap.Modal(document.getElementById('errorModal')).show();}).finally(()=>{btn.disabled=false;btn.innerHTML='Confirm Transfer';});}
+
+        if (type === 'nigeria_bank'){
+            const bankSel = document.getElementById('bankCode');
+            payload.account_number = document.getElementById('accountNumber').value.trim();
+            payload.bank_code      = bankSel.value;
+            payload.bankName       = bankSel.options[bankSel.selectedIndex]?.text || '';
+            payload.account_name   = resolvedAccountName;
+            payload.accountName    = resolvedAccountName;
+            payload.recipientName  = resolvedAccountName;
+            payload.bvn            = document.getElementById('bvn')?.value || '';
+            payload.is_nigeria_bank = true;
+        } else {
+            cfg.fields.forEach(f => {
+                if (f.type === 'hidden') return;
+                const el = document.getElementById(f.name);
+                if (el) payload[f.name] = el.value;
+            });
+        }
+
+        const btn = document.getElementById('confirmTransfer');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing…';
+
+        fetch('/api/transfer', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.success){
+                // Fill success modal
+                document.getElementById('successAmount').textContent = `$${parseFloat(payload.amount).toFixed(2)}`;
+                const recipientDisplay = payload.recipientName || payload.accountName || payload.fullName || payload.account_name || 'Recipient';
+                document.getElementById('successRecipient').textContent = recipientDisplay;
+                document.getElementById('successTransactionId').textContent = data.transactionId || ('txn_' + Math.random().toString(36).substr(2,9).toUpperCase());
+
+                const refWrap = document.getElementById('successBankRefWrap');
+                const refSpan = document.getElementById('successBankRef');
+                if (data.paystackReference){
+                    refSpan.textContent = data.paystackReference;
+                    refWrap.classList.remove('d-none');
+                } else {
+                    refWrap.classList.add('d-none');
+                }
+
+                new bootstrap.Modal(document.getElementById('successModal')).show();
+
+                // Refresh balance & recent transactions
+                fetchUserData();
+
+                // Reset form
+                document.getElementById('transferForm').reset();
+                document.getElementById('step4').classList.add('d-none');
+                document.getElementById('step1').classList.remove('d-none');
+                updateStepIndicator(1);
+                resolvedAccountName = '';
+            } else {
+                document.getElementById('errorMessage').textContent = data.message || 'Transfer failed';
+                new bootstrap.Modal(document.getElementById('errorModal')).show();
+            }
+        })
+        .catch(err => {
+            document.getElementById('errorMessage').textContent = err.message || 'Network error';
+            new bootstrap.Modal(document.getElementById('errorModal')).show();
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = 'Confirm Transfer';
+        });
+    }
     </script>
 </body>
 </html>
