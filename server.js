@@ -8,8 +8,8 @@ const app = express();
 const port = 1000;
 
 // JSONBin Configuration
-const JSONBIN_API_KEY = '$2a$10$nCBLclxfTfVHOJVQH1rRSOq.M/Ds19fpLw1sEX7k9IREVmxidVeBS';
-const USERS_BIN_ID = '6936faf2d0ea881f401b114e';
+const JSONBIN_API_KEY = '$2a$10$rCMZ5BGigbU.r61CyfSSMuDVGGKbVun2m0Q/crGUa4hM8vmfP81g2';
+const USERS_BIN_ID = '6aa7ef35ffd5d16053050110';
 const MESSAGES_BIN_ID = '6936fb2e43b1c97be9e003e2';
 
 const JSONBIN_BASE_URL = 'https://api.jsonbin.io/v3/b';
