@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction History | Premier Bank</title>
+    <title>Transaction History | WUWALLET</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
@@ -454,7 +454,7 @@
             <div>
                 <div class="logo">
                     <i class="fas fa-university"></i>
-                    <span>Premier Bank</span>
+                    <span>WUWALLET</span>
                 </div>
                 <h1 class="page-title">Transaction History</h1>
                 <p class="page-subtitle">View and manage your transaction records</p>
@@ -565,7 +565,7 @@
             <div class="modal-body">
                 <div class="receipt">
                     <div class="receipt-header">
-                        <div class="receipt-title">Premier Bank</div>
+                        <div class="receipt-title">WUWALLET</div>
                         <div class="receipt-subtitle">Transaction Receipt</div>
                     </div>
                     
@@ -822,7 +822,7 @@
                 return;
             }
             
-            let txtContent = 'Premier Bank - Transaction History\n';
+            let txtContent = 'WUWALLET - Transaction History\n';
             txtContent += 'Generated on: ' + new Date().toLocaleDateString() + '\n\n';
             
             filteredTransactions.forEach(transaction => {
@@ -862,7 +862,7 @@
             // Add header
             doc.setFontSize(20);
             doc.setTextColor(40, 40, 40);
-            doc.text('Premier Bank - Transaction History', 20, 20);
+            doc.text('WUWALLET - Transaction History', 20, 20);
             
             doc.setFontSize(12);
             doc.setTextColor(100, 100, 100);
